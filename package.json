@@ -1,7 +1,8 @@
 {
   "name": "@yucccc/utils",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "type": "module",
+  "private": false,
   "description": "utils ",
   "author": "yucccc",
   "license": "ISC",
@@ -12,7 +13,7 @@
     "dev": "vitest dev",
     "lint": "eslint --ext .ts,.js,.mjs,.cjs .",
     "prepack": "unbuild",
-    "release": "pnpm test && standard-version && git push --follow-tags && npm publish --access=public",
+    "release": "pnpm test && standard-version && git push --follow-tags && npm publish",
     "test": " vitest run --coverage",
     "build": "unbuild"
   },
