@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.3](https://github.com/yucccc/utils/compare/v0.0.2...v0.0.3) (2022-11-11)
+
+
+### Features
+
+* add ci  add test ([90bbebc](https://github.com/yucccc/utils/commit/90bbebc943fcf3594cdc36f53b7f934fb0671f09))
+
 ### 0.0.2 (2022-11-11)
 
 
