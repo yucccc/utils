@@ -1,2 +1,6 @@
 export * from './inset'
 export * from './create'
+export * from './scroll'
+export * from './url'
+export * from './design'
+export * from './check'
