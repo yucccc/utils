@@ -1,7 +1,7 @@
 /**
  * 检查对象内是否缺少某个字段 并返回缺少的字段
- * @param needCheckParams 
- * @param isReqParams 
+ * @param needCheckParams
+ * @param isReqParams
  * @returns string[]
  */
 export const checkParamsMiss = function (needCheckParams: object, isReqParams: string[]) {
