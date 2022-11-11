@@ -1,6 +1,6 @@
 {
   "name": "@yucccc/utils",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "type": "module",
   "description": "utils ",
   "author": "yucccc",
@@ -9,7 +9,11 @@
   "module": "./dist/index.mjs",
   "types": "./dist/index.d.ts",
   "scripts": {
-    "dev": "unbuild --stub",
+    "dev": "vitest dev",
+    "lint": "eslint --ext .ts,.js,.mjs,.cjs .",
+    "prepack": "unbuild",
+    "release": "pnpm test && standard-version && git push --follow-tags && pnpm publish",
+    "test": " vitest run --coverage",
     "build": "unbuild"
   },
   "exports": {
@@ -22,11 +26,15 @@
   "files": [
     "dist"
   ],
-  "dependencies": {},
   "devDependencies": {
-    "vitest": "^0.25.1",
+    "@nuxtjs/eslint-config-typescript": "^11.0.0",
     "@types/node": "^18.11.9",
+    "@vitest/coverage-c8": "^0.25.1",
+    "eslint": "^8.27.0",
+    "standard-version": "^9.5.0",
     "typescript": "^4.8.4",
-    "unbuild": "^0.9.4"
-  }
+    "unbuild": "^0.9.4",
+    "vitest": "^0.25.1"
+  },
+  "packageManager": "pnpm@7.13.4"
 }
