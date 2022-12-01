@@ -11,7 +11,8 @@ export const getURLParameters = <T extends object>(url: string): T => {
             // 带有#号认为是锚点
             const v2 = v.slice(v.indexOf('=') + 1).split('#')[0]
             const key = v.slice(0, v.indexOf('='))
-            a[key as keyof T] = v2
+            // @ts-ignore
+            a[key] = v2
             return a
         },
         {} as T
