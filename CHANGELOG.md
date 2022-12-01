@@ -2,6 +2,20 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.7](https://github.com/yucccc/utils/compare/v0.0.6...v0.0.7) (2022-12-01)
+
+
+### Features
+
+* add axios ([21cc527](https://github.com/yucccc/utils/commit/21cc52797dc26b41e6d25235a66205787c9703ee))
+* add env ([362d956](https://github.com/yucccc/utils/commit/362d956017e586c91dc5644395ca1ee4151d34b3))
+* add url test ([2d25efc](https://github.com/yucccc/utils/commit/2d25efcee285473eb8cb5be18e02a9c002eeb55b))
+
+
+### Bug Fixes
+
+* 去掉url默认参数 ([cd2e4b7](https://github.com/yucccc/utils/commit/cd2e4b7269a4e52ce9c792dfab14e012a33c78ca))
+
 ### [0.0.6](https://github.com/yucccc/utils/compare/v0.0.5...v0.0.6) (2022-11-11)
 
 ### [0.0.5](https://github.com/yucccc/utils/compare/v0.0.4...v0.0.5) (2022-11-11)
