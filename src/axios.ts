@@ -1,22 +1,39 @@
 import type { AxiosInstance, AxiosRequestConfig, AxiosResponse } from 'axios'
 import axios from 'axios'
 import { merge } from 'lodash-es'
+
+
+export interface HRequestConfig extends AxiosRequestConfig {
+  /**
+   * 是否显示loading
+   */
+  isLoading?: boolean
+  interceptorHooks?: InterceptorHooks
+}
+
 /**
  * 封装后，不支持传入拦截器
  * 需要自己定义接口继承 AxiosRequestConfig类型
  * 从而支持传入拦截器，但拦截器选项应为可选属性
  * 之后请求实例传入的options为继承了AxiosRequestConfig的自定义类型
  */
-interface InterceptorHooks {
+export interface InterceptorHooks {
+  /**
+   * 请求拦截器
+   */
   requestInterceptor?: (config: HRequestConfig) => HRequestConfig
+  /**
+   * 请求拦截器错误处理
+   */
   requestInterceptorCatch?: <T>(error: T) => T
+  /**
+   * 响应拦截器
+   **/
   responseInterceptor?: (response: AxiosResponse) => AxiosResponse
+  /**
+   * 响应拦截器错误处理
+   */
   responseInterceptorCatch?: <T>(error: T) => T
-}
-
-export interface HRequestConfig extends AxiosRequestConfig {
-  isLoading?: boolean
-  interceptorHooks?: InterceptorHooks
 }
 
 export class HRequest {
