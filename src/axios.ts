@@ -52,7 +52,7 @@ export class HRequest {
   instance: AxiosInstance
   constructor(options: HRequestConfig) {
     // 合并默认配置
-    merge(this.config, [options])
+    merge(this.config, options)
     this.interceptorHooks = options.interceptorHooks
     this.instance = axios.create(this.config)
     this.setupInterceptor()
