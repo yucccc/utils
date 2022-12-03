@@ -2,6 +2,25 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.0.8](https://github.com/yucccc/utils/compare/v0.0.7...v0.0.8) (2022-12-03)
+
+
+### Features
+
+* add docs ([170c2d2](https://github.com/yucccc/utils/commit/170c2d2d7fd88efd2957150c13273a8a0a6df1a0))
+* build axios ([5574110](https://github.com/yucccc/utils/commit/5574110fd61b81112420a72139313ad528953808))
+
+
+### Bug Fixes
+
+* axios merge ([81de1ea](https://github.com/yucccc/utils/commit/81de1ea1b24bea9a5ed19d9a5e74b51b97d9f7b3))
+* ci ([5878b30](https://github.com/yucccc/utils/commit/5878b30f7a37646e026b1cc002cd84934fc6341f))
+* ci ([f2e9c8b](https://github.com/yucccc/utils/commit/f2e9c8b669e1774d9b2309b034373364cc8d3886))
+* ci ([3196a6e](https://github.com/yucccc/utils/commit/3196a6e69b7bfaee48439e322db912fa0446813d))
+* ci ([b5d54c7](https://github.com/yucccc/utils/commit/b5d54c7e920f8cd7bdc3b4dbe9a01b2f49bf0d52))
+* path ([a63af9f](https://github.com/yucccc/utils/commit/a63af9faf8307bec10bf3dad2e5f74daff19c495))
+* vite dependencies ([9a9fb07](https://github.com/yucccc/utils/commit/9a9fb07a1b10d3b0b44332c7e564978f664904ca))
+
 ### [0.0.7](https://github.com/yucccc/utils/compare/v0.0.6...v0.0.7) (2022-12-01)
 
 
