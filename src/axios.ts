@@ -2,12 +2,10 @@ import type { AxiosInstance, AxiosRequestConfig, AxiosResponse } from 'axios'
 import axios from 'axios'
 import { merge } from 'lodash-es'
 
-
 export interface HRequestConfig extends AxiosRequestConfig {
-  /**
-   * 是否显示loading
-   */
-  isLoading?: boolean
+  /* 是否显示loading */
+  useLoading?: boolean
+  /* 拦截器 */
   interceptorHooks?: InterceptorHooks
 }
 
@@ -18,9 +16,7 @@ export interface HRequestConfig extends AxiosRequestConfig {
  * 之后请求实例传入的options为继承了AxiosRequestConfig的自定义类型
  */
 export interface InterceptorHooks {
-  /**
-   * 请求拦截器
-   */
+  /* 请求拦截器*/
   requestInterceptor?: (config: HRequestConfig) => HRequestConfig
   /**
    * 请求拦截器错误处理
@@ -41,7 +37,7 @@ export class HRequest {
    * 默认配置会被合并
    */
   config: HRequestConfig = {
-    isLoading: false,
+    useLoading: false,
     headers: {
       'Content-Type': 'application/json;charset=UTF-8',
     },
@@ -100,3 +96,4 @@ export class HRequest {
     return this.request(url, { ...config, data, method: 'PUT' })
   }
 }
+
