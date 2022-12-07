@@ -42,7 +42,4 @@ const h = HRequest({
 h.get('/url/a', {data: '1'}, { useLoading: true })
 ```
 
-
-
-```
 @props2table(../src/axios.ts)
