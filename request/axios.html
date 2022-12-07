@@ -6,8 +6,8 @@
     <title>axios封装 | Practical Utils</title>
     <meta name="description" content="Practical business tools methodology package.">
     <link rel="stylesheet" href="/utils/assets/style.f709bb6c.css">
-    <link rel="modulepreload" href="/utils/assets/app.d9a911a4.js">
-    <link rel="modulepreload" href="/utils/assets/request_axios.md.9cf68d52.lean.js">
+    <link rel="modulepreload" href="/utils/assets/app.042491de.js">
+    <link rel="modulepreload" href="/utils/assets/request_axios.md.9436d7e9.lean.js">
     
     <script id="check-dark-light">(()=>{const e=localStorage.getItem("vitepress-theme-appearance")||"",a=window.matchMedia("(prefers-color-scheme: dark)").matches;(!e||e==="auto"?a:e==="dark")&&document.documentElement.classList.add("dark")})();</script>
   </head>
@@ -45,92 +45,9 @@
 <span class="line"><span style="color:#89DDFF;">}</span><span style="color:#A6ACCD;">)</span></span>
 <span class="line"><span style="color:#676E95;">// 需要给接口传递isLoading: true 代表需要使用loading</span></span>
 <span class="line"><span style="color:#A6ACCD;">h</span><span style="color:#89DDFF;">.</span><span style="color:#82AAFF;">get</span><span style="color:#A6ACCD;">(</span><span style="color:#89DDFF;">&#39;</span><span style="color:#C3E88D;">/url/a</span><span style="color:#89DDFF;">&#39;</span><span style="color:#89DDFF;">,</span><span style="color:#A6ACCD;"> </span><span style="color:#89DDFF;">{</span><span style="color:#F07178;">data</span><span style="color:#89DDFF;">:</span><span style="color:#A6ACCD;"> </span><span style="color:#89DDFF;">&#39;</span><span style="color:#C3E88D;">1</span><span style="color:#89DDFF;">&#39;</span><span style="color:#89DDFF;">},</span><span style="color:#A6ACCD;"> </span><span style="color:#89DDFF;">{</span><span style="color:#A6ACCD;"> </span><span style="color:#F07178;">useLoading</span><span style="color:#89DDFF;">:</span><span style="color:#A6ACCD;"> </span><span style="color:#FF9CAC;">true</span><span style="color:#A6ACCD;"> </span><span style="color:#89DDFF;">}</span><span style="color:#A6ACCD;">)</span></span>
-<span class="line"></span></code></pre></div><div class="language-"><button title="Copy Code" class="copy"></button><span class="lang"></span><pre class="shiki"><code><span class="line"><span style="color:#A6ACCD;"></span></span>
-<span class="line"><span style="color:#A6ACCD;">## HRequestConfig</span></span>
-<span class="line"><span style="color:#A6ACCD;">&lt;table&gt; </span></span>
-<span class="line"><span style="color:#A6ACCD;">&lt;thead&gt;</span></span>
-<span class="line"><span style="color:#A6ACCD;">&lt;tr&gt;</span></span>
-<span class="line"><span style="color:#A6ACCD;">&lt;th style=&quot;white-space: nowrap;text-align:left&quot;&gt;参数&lt;/th&gt;</span></span>
-<span class="line"><span style="color:#A6ACCD;">&lt;th style=&quot;white-space: nowrap;text-align:left&quot;&gt;说明&lt;/th&gt;</span></span>
-<span class="line"><span style="color:#A6ACCD;">&lt;th style=&quot;white-space: nowrap;text-align:left&quot;&gt;类型&lt;/th&gt;</span></span>
-<span class="line"><span style="color:#A6ACCD;">&lt;th style=&quot;white-space: nowrap;text-align:left&quot;&gt;是否必填&lt;/th&gt;</span></span>
-<span class="line"><span style="color:#A6ACCD;">&lt;th style=&quot;white-space: nowrap;text-align:left&quot;&gt;可选值&lt;/th&gt;</span></span>
-<span class="line"><span style="color:#A6ACCD;">&lt;th style=&quot;white-space: nowrap;text-align:left&quot;&gt;默认值&lt;/th&gt;</span></span>
-<span class="line"><span style="color:#A6ACCD;">&lt;/tr&gt;</span></span>
-<span class="line"><span style="color:#A6ACCD;">&lt;/thead&gt;</span></span>
-<span class="line"><span style="color:#A6ACCD;">&lt;tbody&gt;</span></span>
-<span class="line"><span style="color:#A6ACCD;">&lt;tr&gt;</span></span>
-<span class="line"><span style="color:#A6ACCD;">&lt;td style=&quot;white-space: nowrap;text-align:left&quot;&gt;useLoading&lt;/td&gt;</span></span>
-<span class="line"><span style="color:#A6ACCD;">&lt;td style=&quot;white-space: nowrap;text-align:left&quot;&gt;是否显示loading&lt;/td&gt;</span></span>
-<span class="line"><span style="color:#A6ACCD;">&lt;td style=&quot;white-space: nowrap;text-align:left&quot;&gt;boolean&lt;/td&gt;</span></span>
-<span class="line"><span style="color:#A6ACCD;">&lt;td style=&quot;white-space: nowrap;text-align:left&quot;&gt;false&lt;/td&gt;</span></span>
-<span class="line"><span style="color:#A6ACCD;">&lt;td style=&quot;white-space: nowrap;text-align:left&quot;&gt;&lt;/td&gt;</span></span>
-<span class="line"><span style="color:#A6ACCD;">&lt;td style=&quot;white-space: nowrap;text-align:left&quot;&gt;&lt;/td&gt;</span></span>
-<span class="line"><span style="color:#A6ACCD;">&lt;/tr&gt;</span></span>
-<span class="line"><span style="color:#A6ACCD;">&lt;tr&gt;</span></span>
-<span class="line"><span style="color:#A6ACCD;">&lt;td style=&quot;white-space: nowrap;text-align:left&quot;&gt;interceptorHooks&lt;/td&gt;</span></span>
-<span class="line"><span style="color:#A6ACCD;">&lt;td style=&quot;white-space: nowrap;text-align:left&quot;&gt;拦截器&lt;/td&gt;</span></span>
-<span class="line"><span style="color:#A6ACCD;">&lt;td style=&quot;white-space: nowrap;text-align:left&quot;&gt;InterceptorHooks&lt;/td&gt;</span></span>
-<span class="line"><span style="color:#A6ACCD;">&lt;td style=&quot;white-space: nowrap;text-align:left&quot;&gt;false&lt;/td&gt;</span></span>
-<span class="line"><span style="color:#A6ACCD;">&lt;td style=&quot;white-space: nowrap;text-align:left&quot;&gt;&lt;/td&gt;</span></span>
-<span class="line"><span style="color:#A6ACCD;">&lt;td style=&quot;white-space: nowrap;text-align:left&quot;&gt;&lt;/td&gt;</span></span>
-<span class="line"><span style="color:#A6ACCD;">&lt;/tr&gt;</span></span>
-<span class="line"><span style="color:#A6ACCD;">&lt;/tbody&gt;</span></span>
-<span class="line"><span style="color:#A6ACCD;">&lt;/table&gt;</span></span>
-<span class="line"><span style="color:#A6ACCD;">## InterceptorHooks</span></span>
-<span class="line"><span style="color:#A6ACCD;">&lt;table&gt; </span></span>
-<span class="line"><span style="color:#A6ACCD;">&lt;thead&gt;</span></span>
-<span class="line"><span style="color:#A6ACCD;">&lt;tr&gt;</span></span>
-<span class="line"><span style="color:#A6ACCD;">&lt;th style=&quot;white-space: nowrap;text-align:left&quot;&gt;参数&lt;/th&gt;</span></span>
-<span class="line"><span style="color:#A6ACCD;">&lt;th style=&quot;white-space: nowrap;text-align:left&quot;&gt;说明&lt;/th&gt;</span></span>
-<span class="line"><span style="color:#A6ACCD;">&lt;th style=&quot;white-space: nowrap;text-align:left&quot;&gt;类型&lt;/th&gt;</span></span>
-<span class="line"><span style="color:#A6ACCD;">&lt;th style=&quot;white-space: nowrap;text-align:left&quot;&gt;是否必填&lt;/th&gt;</span></span>
-<span class="line"><span style="color:#A6ACCD;">&lt;th style=&quot;white-space: nowrap;text-align:left&quot;&gt;可选值&lt;/th&gt;</span></span>
-<span class="line"><span style="color:#A6ACCD;">&lt;th style=&quot;white-space: nowrap;text-align:left&quot;&gt;默认值&lt;/th&gt;</span></span>
-<span class="line"><span style="color:#A6ACCD;">&lt;/tr&gt;</span></span>
-<span class="line"><span style="color:#A6ACCD;">&lt;/thead&gt;</span></span>
-<span class="line"><span style="color:#A6ACCD;">&lt;tbody&gt;</span></span>
-<span class="line"><span style="color:#A6ACCD;">&lt;tr&gt;</span></span>
-<span class="line"><span style="color:#A6ACCD;">&lt;td style=&quot;white-space: nowrap;text-align:left&quot;&gt;requestInterceptor&lt;/td&gt;</span></span>
-<span class="line"><span style="color:#A6ACCD;">&lt;td style=&quot;white-space: nowrap;text-align:left&quot;&gt;请求拦截器&lt;/td&gt;</span></span>
-<span class="line"><span style="color:#A6ACCD;">&lt;td style=&quot;white-space: nowrap;text-align:left&quot;&gt;(config: HRequestConfig) =&amp;gt; HRequestConfig&lt;/td&gt;</span></span>
-<span class="line"><span style="color:#A6ACCD;">&lt;td style=&quot;white-space: nowrap;text-align:left&quot;&gt;false&lt;/td&gt;</span></span>
-<span class="line"><span style="color:#A6ACCD;">&lt;td style=&quot;white-space: nowrap;text-align:left&quot;&gt;&lt;/td&gt;</span></span>
-<span class="line"><span style="color:#A6ACCD;">&lt;td style=&quot;white-space: nowrap;text-align:left&quot;&gt;&lt;/td&gt;</span></span>
-<span class="line"><span style="color:#A6ACCD;">&lt;/tr&gt;</span></span>
-<span class="line"><span style="color:#A6ACCD;">&lt;tr&gt;</span></span>
-<span class="line"><span style="color:#A6ACCD;">&lt;td style=&quot;white-space: nowrap;text-align:left&quot;&gt;requestInterceptorCatch&lt;/td&gt;</span></span>
-<span class="line"><span style="color:#A6ACCD;">&lt;td style=&quot;white-space: nowrap;text-align:left&quot;&gt;请求拦截器错误处理&lt;/td&gt;</span></span>
-<span class="line"><span style="color:#A6ACCD;">&lt;td style=&quot;white-space: nowrap;text-align:left&quot;&gt;(error: T) =&amp;gt; T&lt;/td&gt;</span></span>
-<span class="line"><span style="color:#A6ACCD;">&lt;td style=&quot;white-space: nowrap;text-align:left&quot;&gt;false&lt;/td&gt;</span></span>
-<span class="line"><span style="color:#A6ACCD;">&lt;td style=&quot;white-space: nowrap;text-align:left&quot;&gt;&lt;/td&gt;</span></span>
-<span class="line"><span style="color:#A6ACCD;">&lt;td style=&quot;white-space: nowrap;text-align:left&quot;&gt;&lt;/td&gt;</span></span>
-<span class="line"><span style="color:#A6ACCD;">&lt;/tr&gt;</span></span>
-<span class="line"><span style="color:#A6ACCD;">&lt;tr&gt;</span></span>
-<span class="line"><span style="color:#A6ACCD;">&lt;td style=&quot;white-space: nowrap;text-align:left&quot;&gt;responseInterceptor&lt;/td&gt;</span></span>
-<span class="line"><span style="color:#A6ACCD;">&lt;td style=&quot;white-space: nowrap;text-align:left&quot;&gt;响应拦截器&lt;/td&gt;</span></span>
-<span class="line"><span style="color:#A6ACCD;">&lt;td style=&quot;white-space: nowrap;text-align:left&quot;&gt;(response: AxiosResponse) =&amp;gt; AxiosResponse&lt;/td&gt;</span></span>
-<span class="line"><span style="color:#A6ACCD;">&lt;td style=&quot;white-space: nowrap;text-align:left&quot;&gt;false&lt;/td&gt;</span></span>
-<span class="line"><span style="color:#A6ACCD;">&lt;td style=&quot;white-space: nowrap;text-align:left&quot;&gt;&lt;/td&gt;</span></span>
-<span class="line"><span style="color:#A6ACCD;">&lt;td style=&quot;white-space: nowrap;text-align:left&quot;&gt;&lt;/td&gt;</span></span>
-<span class="line"><span style="color:#A6ACCD;">&lt;/tr&gt;</span></span>
-<span class="line"><span style="color:#A6ACCD;">&lt;tr&gt;</span></span>
-<span class="line"><span style="color:#A6ACCD;">&lt;td style=&quot;white-space: nowrap;text-align:left&quot;&gt;responseInterceptorCatch&lt;/td&gt;</span></span>
-<span class="line"><span style="color:#A6ACCD;">&lt;td style=&quot;white-space: nowrap;text-align:left&quot;&gt;响应拦截器错误处理&lt;/td&gt;</span></span>
-<span class="line"><span style="color:#A6ACCD;">&lt;td style=&quot;white-space: nowrap;text-align:left&quot;&gt;(error: T) =&amp;gt; T&lt;/td&gt;</span></span>
-<span class="line"><span style="color:#A6ACCD;">&lt;td style=&quot;white-space: nowrap;text-align:left&quot;&gt;false&lt;/td&gt;</span></span>
-<span class="line"><span style="color:#A6ACCD;">&lt;td style=&quot;white-space: nowrap;text-align:left&quot;&gt;&lt;/td&gt;</span></span>
-<span class="line"><span style="color:#A6ACCD;">&lt;td style=&quot;white-space: nowrap;text-align:left&quot;&gt;&lt;/td&gt;</span></span>
-<span class="line"><span style="color:#A6ACCD;">&lt;/tr&gt;</span></span>
-<span class="line"><span style="color:#A6ACCD;">&lt;/tbody&gt;</span></span>
-<span class="line"><span style="color:#A6ACCD;">&lt;/table&gt;</span></span>
-<span class="line"><span style="color:#A6ACCD;"></span></span>
-<span class="line"><span style="color:#A6ACCD;">&lt;script setup&gt;</span></span>
-<span class="line"><span style="color:#A6ACCD;">  const hmrFiles = i<wbr>mport.meta.glob([&quot;../src/axios.ts&quot;], {  eager: true })</span></span>
-<span class="line"><span style="color:#A6ACCD;">&lt;/script&gt;</span></span>
-<span class="line"><span style="color:#A6ACCD;"></span></span></code></pre></div></div></div></main><!--[--><!--]--><footer class="VPDocFooter" data-v-7dd55a9c data-v-edc4fadc><div class="edit-info" data-v-edc4fadc><!----><div class="last-updated" data-v-edc4fadc><p class="VPLastUpdated" data-v-edc4fadc data-v-5ce65bc4>Last updated: <time datetime="2022-12-07T08:53:49.000Z" data-v-5ce65bc4></time></p></div></div><!----></footer><!--[--><!--]--></div></div></div></div></div><!----><!--[--><!--]--></div></div>
-    <script>__VP_HASH_MAP__ = JSON.parse("{\"index.md\":\"f7762cfb\",\"request_axios.md\":\"9cf68d52\"}")</script>
-    <script type="module" async src="/utils/assets/app.d9a911a4.js"></script>
+<span class="line"></span></code></pre></div><h2 id="hrequestconfig" tabindex="-1">HRequestConfig <a class="header-anchor" href="#hrequestconfig" aria-hidden="true">#</a></h2><table><thead><tr><th style="white-space:nowrap;text-align:left;">参数</th><th style="white-space:nowrap;text-align:left;">说明</th><th style="white-space:nowrap;text-align:left;">类型</th><th style="white-space:nowrap;text-align:left;">是否必填</th><th style="white-space:nowrap;text-align:left;">可选值</th><th style="white-space:nowrap;text-align:left;">默认值</th></tr></thead><tbody><tr><td style="white-space:nowrap;text-align:left;">useLoading</td><td style="white-space:nowrap;text-align:left;">是否显示loading</td><td style="white-space:nowrap;text-align:left;">boolean</td><td style="white-space:nowrap;text-align:left;">false</td><td style="white-space:nowrap;text-align:left;"></td><td style="white-space:nowrap;text-align:left;"></td></tr><tr><td style="white-space:nowrap;text-align:left;">interceptorHooks</td><td style="white-space:nowrap;text-align:left;">拦截器</td><td style="white-space:nowrap;text-align:left;">InterceptorHooks</td><td style="white-space:nowrap;text-align:left;">false</td><td style="white-space:nowrap;text-align:left;"></td><td style="white-space:nowrap;text-align:left;"></td></tr></tbody></table> ## InterceptorHooks <table><thead><tr><th style="white-space:nowrap;text-align:left;">参数</th><th style="white-space:nowrap;text-align:left;">说明</th><th style="white-space:nowrap;text-align:left;">类型</th><th style="white-space:nowrap;text-align:left;">是否必填</th><th style="white-space:nowrap;text-align:left;">可选值</th><th style="white-space:nowrap;text-align:left;">默认值</th></tr></thead><tbody><tr><td style="white-space:nowrap;text-align:left;">requestInterceptor</td><td style="white-space:nowrap;text-align:left;">请求拦截器</td><td style="white-space:nowrap;text-align:left;">(config: HRequestConfig) =&gt; HRequestConfig</td><td style="white-space:nowrap;text-align:left;">false</td><td style="white-space:nowrap;text-align:left;"></td><td style="white-space:nowrap;text-align:left;"></td></tr><tr><td style="white-space:nowrap;text-align:left;">requestInterceptorCatch</td><td style="white-space:nowrap;text-align:left;">请求拦截器错误处理</td><td style="white-space:nowrap;text-align:left;">(error: T) =&gt; T</td><td style="white-space:nowrap;text-align:left;">false</td><td style="white-space:nowrap;text-align:left;"></td><td style="white-space:nowrap;text-align:left;"></td></tr><tr><td style="white-space:nowrap;text-align:left;">responseInterceptor</td><td style="white-space:nowrap;text-align:left;">响应拦截器</td><td style="white-space:nowrap;text-align:left;">(response: AxiosResponse) =&gt; AxiosResponse</td><td style="white-space:nowrap;text-align:left;">false</td><td style="white-space:nowrap;text-align:left;"></td><td style="white-space:nowrap;text-align:left;"></td></tr><tr><td style="white-space:nowrap;text-align:left;">responseInterceptorCatch</td><td style="white-space:nowrap;text-align:left;">响应拦截器错误处理</td><td style="white-space:nowrap;text-align:left;">(error: T) =&gt; T</td><td style="white-space:nowrap;text-align:left;">false</td><td style="white-space:nowrap;text-align:left;"></td><td style="white-space:nowrap;text-align:left;"></td></tr></tbody></table></div></div></main><!--[--><!--]--><footer class="VPDocFooter" data-v-7dd55a9c data-v-edc4fadc><div class="edit-info" data-v-edc4fadc><!----><div class="last-updated" data-v-edc4fadc><p class="VPLastUpdated" data-v-edc4fadc data-v-5ce65bc4>Last updated: <time datetime="2022-12-07T08:56:59.000Z" data-v-5ce65bc4></time></p></div></div><!----></footer><!--[--><!--]--></div></div></div></div></div><!----><!--[--><!--]--></div></div>
+    <script>__VP_HASH_MAP__ = JSON.parse("{\"index.md\":\"d5a0ee76\",\"request_axios.md\":\"9436d7e9\"}")</script>
+    <script type="module" async src="/utils/assets/app.042491de.js"></script>
     
   </body>
 </html>
